@@ -28,30 +28,17 @@ class Animal {
 
 class Cat extends Animal {
   purr() {
-    print("purr");
+    console.log("purr");
   }
 }
 
 class Dog extends Animal {
   bark() {
-    print("woof");
+    console.log("woof");
   }
 }
 
-function print(message) {
-  const outputDiv = document.getElementById("output");
-  outputDiv.innerHTML += message + "<br>";
-  console.log(message);
-}
-
-function runDemo() {
-  document.getElementById("output").innerHTML = "";
-
-  const myCat = new Cat("Siamese");
-  myCat.makeSound();
-  myCat.purr();
-
-  const myDog = new Dog("Golden Retriever");
-  myDog.makeSound();
-  myDog.bark();
-}
+// VERY IMPORTANT for Cypress
+window.Animal = Animal;
+window.Cat = Cat;
+window.Dog = Dog;
