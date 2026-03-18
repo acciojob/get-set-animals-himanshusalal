@@ -26,28 +26,24 @@ class Animal {
   }
 }
 
-// Cat Class
 class Cat extends Animal {
   purr() {
     print("purr");
   }
 }
 
-// Dog Class
 class Dog extends Animal {
   bark() {
     print("woof");
   }
 }
 
-// Function to show output on screen
 function print(message) {
   const outputDiv = document.getElementById("output");
   outputDiv.innerHTML += message + "<br>";
-  console.log(message); // also logs in console (for Cypress)
+  console.log(message);
 }
 
-// Run Demo
 function runDemo() {
   document.getElementById("output").innerHTML = "";
 
